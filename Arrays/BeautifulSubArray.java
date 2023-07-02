@@ -2,7 +2,6 @@ class Solution {
     public long beautifulSubarrays(int[] nums) {
         long count = 0; 
         int xor = 0;
-
         HashMap<Integer, Integer> hashMap = new HashMap<>();
         hashMap.put(0, 1);
 
