@@ -46,6 +46,6 @@ public class ValidParantheses{
     public static void main(String[] args){
         Solution3 sol = new Solution3();
 
-        System.out.println(sol.isValid("()"));
+        System.out.println(sol.isValid(""));
     }
 }
