@@ -11,6 +11,7 @@ class Solution {
             hashMap.put(xor, hashMap.getOrDefault(xor, 0) + 1);
         }
 
+
         // if(nums.length == 1){
         //     if((nums[0] ^ 0) == 0)
         //         return 1;
