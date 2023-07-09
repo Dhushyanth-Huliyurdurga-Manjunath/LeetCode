@@ -1,3 +1,5 @@
+package General;
+
 class Solution {
     public boolean isPalindrome(int x) {
         int palindrome = 0;
