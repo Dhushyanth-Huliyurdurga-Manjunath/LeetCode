@@ -26,7 +26,6 @@ public class MergeSortedList{
 }
 
 
-
 /**
  * Definition for singly-linked list.
  * public class ListNode {
