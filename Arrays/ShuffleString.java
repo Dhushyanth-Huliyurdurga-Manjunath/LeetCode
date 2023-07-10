@@ -1,4 +1,4 @@
-class Solution {
+class Solution9 {
     public String restoreString(String s, int[] indices) {
         char[] shuffledString = new char[indices.length];
 

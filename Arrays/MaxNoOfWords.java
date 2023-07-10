@@ -1,4 +1,4 @@
-class Solution {
+class Solution32 {
     public int mostWordsFound(String[] sentences) {
         int max = 0;
 

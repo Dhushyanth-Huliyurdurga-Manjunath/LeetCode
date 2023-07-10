@@ -1,3 +1,5 @@
+package General;
+
 import java.util.*;
 
 class Solution3 {

@@ -1,4 +1,4 @@
-class Solution {
+class Solution19 {
     public int sumOfMultiples(int n) {
         int sum = 0; 
         for(int i = 1; i <= n; i++){

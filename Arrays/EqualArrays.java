@@ -1,4 +1,5 @@
-class Solution {
+import java.util.*;
+class Solution34 {
     public int minMoves2(int[] nums) {
         int size = nums.length;
         int moves = 0;

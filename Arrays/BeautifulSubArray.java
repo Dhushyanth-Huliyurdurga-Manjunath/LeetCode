@@ -1,4 +1,5 @@
-class Solution {
+import java.util.*;
+class Solution30 {
     public long beautifulSubarrays(int[] nums) {
         long count = 0; 
         int xor = 0;

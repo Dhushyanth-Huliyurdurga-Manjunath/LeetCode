@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Collections;
-
-class Solution {
+import java.util.*;
+class Solution10 {
     public int[] createTargetArray(int[] nums, int[] index) {
         List<Integer> list = new LinkedList<Integer>();
         for(int i = 0; i < nums.length; i++){

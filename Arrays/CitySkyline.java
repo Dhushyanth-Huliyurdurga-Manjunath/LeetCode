@@ -1,4 +1,5 @@
-class Solution {
+import java.util.*;
+class Solution18 {
     public int maxIncreaseKeepingSkyline(int[][] grid) {
         ArrayList<ArrayList<Integer>> array = new ArrayList<>(grid.length);
         ArrayList<ArrayList<Integer>> transposeArray = new ArrayList<>(grid[1].length);

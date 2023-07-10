@@ -44,7 +44,7 @@
 /*End of Initial Solution */
 
 /*Final Solution */
-class Solution {
+class Solution29 {
     public int[] findArray(int[] pref) {
         int[] arr = new int[pref.length];
         

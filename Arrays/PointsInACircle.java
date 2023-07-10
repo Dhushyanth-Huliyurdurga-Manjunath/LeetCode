@@ -1,4 +1,4 @@
-class Solution {
+class Solution11 {
     public int[] countPoints(int[][] points, int[][] queries) {
         int[] answer = new int[queries.length];
 

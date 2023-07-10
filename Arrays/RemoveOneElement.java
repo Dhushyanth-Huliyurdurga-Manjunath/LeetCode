@@ -1,4 +1,5 @@
-class Solution {
+import java.util.*;
+class Solution23 {
     public boolean canBeIncreasing(int[] nums) {
         ArrayList<Integer> array = new ArrayList<>();
         for(int i: nums){

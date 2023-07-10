@@ -1,4 +1,5 @@
-class Solution {
+import java.util.*;
+class Solution20 {
     public int[] decompressRLElist(int[] nums) {
         List<Integer> list = new ArrayList<>();
         

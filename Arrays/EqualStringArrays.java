@@ -1,4 +1,4 @@
-class Solution {
+class Solution7 {
     public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
         StringBuffer string1 = new StringBuffer();
         StringBuffer string2 = new StringBuffer();

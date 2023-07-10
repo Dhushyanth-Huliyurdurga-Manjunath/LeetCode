@@ -1,4 +1,5 @@
-class Solution {
+import java.util.*;
+class Solution6 {
     public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
         int match = 0;
 

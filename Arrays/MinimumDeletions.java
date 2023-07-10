@@ -1,4 +1,5 @@
-class Solution {
+import java.util.*;
+class Solution21 {
     public int minDeletions(String s) {
         HashMap<Character, Integer> hashMap = new HashMap<>();
         HashMap<Integer, String> valueMap = new HashMap<>();

@@ -1,4 +1,4 @@
-class Solution {
+class Solution5 {
     public int[] decode(int[] encoded, int first) {
         int[] arr = new int[encoded.length + 1];
         arr[0] = first;

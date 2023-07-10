@@ -1,4 +1,5 @@
-class Solution {
+import java.util.*;
+class Solution15 {
     public boolean containsDuplicate(int[] nums) {
         Set<Integer> set = new HashSet<Integer>();
 

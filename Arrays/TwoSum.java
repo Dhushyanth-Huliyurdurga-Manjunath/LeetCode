@@ -1,7 +1,7 @@
 import java.util.*;
 import java.lang.Math;
 
-class Solution {
+class Solution33 {
     public int[] twoSum(int[] nums, int target) {
         // Vector<Integer> complement = new Vector<Integer>(Arrays.asList(nums));
 

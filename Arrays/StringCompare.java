@@ -1,4 +1,4 @@
-class Solution {
+class Solution8 {
     public boolean backspaceCompare(String s, String t) {
         String outputS = "";
         String outputT = "";

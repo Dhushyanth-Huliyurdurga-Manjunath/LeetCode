@@ -1,5 +1,5 @@
 import java.lang.Math;
-class Solution {
+class Solution16 {
     public static int leftSumImpl(int[] array, int index){
         int sum = 0;
         if(index < 0){

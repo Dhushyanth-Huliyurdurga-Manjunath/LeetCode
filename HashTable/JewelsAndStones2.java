@@ -1,6 +1,7 @@
 import java.util.Hashtable;
+import java.util.*;
 
-class Solution {
+class Solution35 {
     public int numJewelsInStones(String jewels, String stones) {
         
         int numberOfStones = 0;

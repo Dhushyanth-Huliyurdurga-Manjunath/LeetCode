@@ -1,4 +1,4 @@
-class Solution {
+class Solution31 {
     public int[] shuffle(int[] nums, int n) {
         int[] tempArray = new int[2*n];
         tempArray[0] = nums[0];

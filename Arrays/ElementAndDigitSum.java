@@ -1,4 +1,4 @@
-class Solution {
+class Solution28 {
     public int differenceOfSum(int[] nums) {
         int elementSum = 0;
         int digitSum = 0;

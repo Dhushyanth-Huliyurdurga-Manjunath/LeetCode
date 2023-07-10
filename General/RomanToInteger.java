@@ -1,6 +1,6 @@
 package General;
 
-class Solution {
+class Solution4 {
     public int romanToInt(String s) {
         int value = 0;
 
