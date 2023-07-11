@@ -1,4 +1,5 @@
-class Solution {
+import java.util.*;
+class Solution37 {
     public int majorityElement(int[] nums) {
         int count = (int)Math.floor(nums.length/2);
 
