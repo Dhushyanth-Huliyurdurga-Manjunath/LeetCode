@@ -1,7 +1,8 @@
+package Top150;
 import java.util.*;
 class Solution37 {
     public int majorityElement(int[] nums) {
-        int count = (int)Math.floor(nums.length/2);
+        int count = (int) (double) (nums.length / 2);
 
         HashMap<Integer, Integer> hashMap = new HashMap<>();
 
