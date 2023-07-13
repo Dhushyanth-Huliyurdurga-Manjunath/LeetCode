@@ -1,3 +1,5 @@
+package General;
+
 class Solution41 {
     public int searchInsert(int[] nums, int target) {
         int position = 0;

@@ -1,3 +1,5 @@
+package General;
+
 public class LengthOfLastWord {
     public static void main(String[] args){
         Solution46 sol = new Solution46();
