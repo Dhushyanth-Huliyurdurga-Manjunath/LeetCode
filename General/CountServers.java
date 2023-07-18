@@ -19,7 +19,6 @@ public class CountServers {
 }
 
 class Solution47 {
-
     public int columnHasServer(int[][] array, int row, int col){
 //        if(col > array[0].length-1){
 //            col = array[0].length-1;
