@@ -24,7 +24,6 @@ public class MergeSortedList{
         System.out.println("\n");
     }
 }
-
 /**
  * Definition for singly-linked list.
  * public class ListNode {
