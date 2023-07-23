@@ -37,6 +37,7 @@ class Solution18 {
         // idx++;
         // }
 
+        
         for (int row = 0; row < grid.length; row++) {
             for (int col = 0; col < grid[1].length; col++) {
                 int minValue = Math.min(rowMax[row], colMax[col]);
