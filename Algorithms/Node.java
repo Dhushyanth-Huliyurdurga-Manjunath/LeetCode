@@ -1,11 +1,11 @@
 package Algorithms;
 
 public class Node {
-    int val;
-    Node right;
-    Node left;
+    public int val;
+    public Node right;
+    public Node left;
 
-    Node(){}
+    public Node(){}
 
     Node(int val){this.val = val;
     this.right = null;
@@ -17,7 +17,7 @@ public class Node {
         this.right = right;
     }
 
-    Node insertValue(int value){
+    public Node insertValue(int value){
         if(value < this.val){
             if(this.left == null){
                 this.left = new Node(value);
