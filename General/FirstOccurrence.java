@@ -1,5 +1,3 @@
-import java.util.*;
-
 class Solution40 {
     public int strStr(String haystack, String needle) {
         int i = 0, j = 0, k = 0; 

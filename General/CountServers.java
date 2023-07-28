@@ -1,5 +1,7 @@
 package General;
 
+import org.jetbrains.annotations.NotNull;
+
 /*You are given a map of a server center, represented as a m * n integer
  matrix grid, where 1 means that on that cell there is a server and 0
  means that it is no server. Two servers are said to communicate if they
@@ -19,47 +21,58 @@ public class CountServers {
 }
 
 class Solution47 {
-    public int columnHasServer(int[][] array, int row, int col){
+    public static void printArray(int[] @NotNull [] array) {
+        for (int[] ints : array) {
+            for (int j = 0; j < array[0].length; j++) {
+                System.out.print(ints[j] + " ");
+            }
+            System.out.println(" ");
+        }
+    }
+
+    public int columnHasServer(int[] @NotNull [] array, int row, int col) {
 //        if(col > array[0].length-1){
 //            col = array[0].length-1;
 //        }
 //        if(row > array.length-1){
 //            row = array.length-1;
 //        }
-        for(int i = row; i < array.length; i++){
-            if(array[i][col] == 1){
+        int i = row;
+        while (i < array.length) {
+            if (array[i][col] == 1) {
                 return i;
             }
+            i++;
         }
         return -1;
     }
 
-    public int rowHasServer(int[][] array, int row, int col){
+    public int rowHasServer(int[] @NotNull [] array, int row, int col) {
 //        if(col > array[0].length-1){
 //            col = array[0].length-1;
 //        }
 //        if(row > array.length-1){
 //            row = array.length-1;
 //        }
-        for(int i = col; i < array[0].length; i++){
-            if(array[row][i] == 1){
+        for (int i = col; i < array[0].length; i++) {
+            if (array[row][i] == 1) {
                 return i;
             }
         }
         return -1;
     }
 
-    public int countServers(int[][] grid) {
+    public int countServers(int[] @NotNull [] grid) {
         int[][] bitMap = new int[grid.length][grid[0].length];
         int count = 0;
 
-        for(int i = 0; i < grid.length; i++){
-            for(int j = 0; j < grid[0].length; j++){
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
                 bitMap[i][j] = 0;
             }
         }
 
-        for(int i = 0; i < grid.length; i++){
+        for (int i = 0; i < grid.length; i++) {
             for(int j = 0; j < grid[0].length; j++){
                 // System.out.print("Before: Grid "+grid[i][j]);
                 // System.out.print(" Bit "+bitMap[i][j]+"\n");
@@ -92,20 +105,11 @@ class Solution47 {
                 printArray(grid);
                 System.out.println("BitMap");
                 printArray(bitMap);
-                System.out.println("Count: "+count);
+                System.out.println("Count: " + count);
                 System.out.println("-------------------------\n");
             }
         }
 
         return count;
-    }
-
-    public static void printArray(int[][] array){
-        for(int i = 0; i < array.length; i++){
-            for(int j = 0; j < array[0].length; j++){
-                System.out.print(array[i][j]+" ");
-            }
-            System.out.println(" ");
-        }
     }
 }

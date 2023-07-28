@@ -1,6 +1,6 @@
 package General;
 
-import java.util.*;
+import java.util.Stack;
 
 class Solution3 {
     public static Character returnCounterCharacter(Character a){
@@ -14,10 +14,10 @@ class Solution3 {
         else return null;
     }
     public boolean isValid(String s) {
-        Stack<Character> stack = new Stack<Character>();
+        Stack<Character> stack = new Stack<>();
 
         System.out.println(s);
-        if(s.length() == 0 || s == null)
+        if (s.length() == 0)
             return false;
 
         for(int i = 0; i < s.length(); i++){
