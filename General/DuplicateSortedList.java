@@ -1,3 +1,5 @@
+package General;
+
 public class DuplicateSortedList{
     public static void main(String[] args){
         Solution61 sol = new Solution61();

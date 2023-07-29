@@ -1,3 +1,5 @@
+package General;
+
 import Algorithms.Node;
 
 public class SameTree {

@@ -20,19 +20,51 @@ public class InOrderTraversal {
 
 class Solution62 {
 
-    List<Integer> list = new ArrayList<Integer>();
+//    List<Integer> list = new ArrayList<Integer>();
     public List<Integer> inorderTraversal(Node root) {
+        Stack<Node> stack = new Stack<Node>();
+        List<Integer> list = new ArrayList<Integer>();
+        Node currentNode = root;
 
-        Node currentNode = new Node();
-        currentNode = root;
-        // TreeNode previousNode = root;
-
-        if(currentNode != null){
-            inorderTraversal(currentNode.left);
+        while(!stack.empty() || currentNode != null){
+            while(currentNode != null){
+                stack.add(currentNode);
+                currentNode = currentNode.left;
+            }
+            currentNode = stack.pop();
             list.add(currentNode.val);
-            inorderTraversal(currentNode.right);
+            currentNode = currentNode.right;
         }
 
         return list;
+
+
+
+
+
+        // TreeNode currentNode = root;
+        // if(currentNode.left != null){
+        //     list = inorderTraversal(currentNode.left);
+        // }
+        // if(currentNode.left == null){
+        //     list.add(currentNode.val);
+        //     inorderTraversal(currentNode.right);
+        // }
+        // list.add(currentNode.val);
+        // return list;
     }
+//    public List<Integer> inorderTraversal(Node root) {
+//
+//        Node currentNode = new Node();
+//        currentNode = root;
+//        // TreeNode previousNode = root;
+//
+//        if(currentNode != null){
+//            inorderTraversal(currentNode.left);
+//            list.add(currentNode.val);
+//            inorderTraversal(currentNode.right);
+//        }
+//
+//        return list;
+//    }
 }

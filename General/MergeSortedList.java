@@ -1,8 +1,10 @@
+package General;
+
 import java.util.*;
 
 public class MergeSortedList{
     public static void main(String[] args){
-        Solution4 sol = new Solution4();
+        Solution04 sol = new Solution04();
         ListNode ln1 = new ListNode();
         ListNode ln2 = new ListNode();
         ListNode ln3 = new ListNode();
@@ -34,7 +36,7 @@ public class MergeSortedList{
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution4 {
+class Solution04 {
 
     public static ListNode insertAtEnd(ListNode list, int value){
         ListNode newNode = new ListNode(value);
