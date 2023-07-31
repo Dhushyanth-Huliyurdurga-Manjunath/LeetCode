@@ -7,14 +7,22 @@ public class Node {
 
     public Node(){}
 
-    Node(int val){this.val = val;
+    public Node(int val){this.val = val;
     this.right = null;
     this.left = null;}
 
-    Node(int val, Node left, Node right){
+    public Node(int val, Node left, Node right){
         this.val = val;
         this.left = left;
         this.right = right;
+    }
+
+    public Node insertCustomValue(Node root, Node left, Node right){
+        this.val = root.val;
+        this.left = left;
+        this.right = right;
+
+        return this;
     }
 
     public Node insertValue(int value){
