@@ -6,6 +6,12 @@ import Algorithms.BinaryTree;
  * @author: Dhushyanth Huliyurdurga Manjunath
  * @since: 8/2/23 10:20 PM
  */
+
+/*
+*Given a binary tree, determine if it is
+height-balanced
+*/
+
 public class BalancedBinaryTree {
     public static void main(String[] args){
         Node tree = new Node();
