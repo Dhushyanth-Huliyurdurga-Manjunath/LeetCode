@@ -1,3 +1,5 @@
+package General;
+
 import Algorithms.Node;
 import Algorithms.BinaryTree;
 
