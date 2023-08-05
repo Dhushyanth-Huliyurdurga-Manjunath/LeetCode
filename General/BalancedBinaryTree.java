@@ -65,7 +65,8 @@ class Solution66 {
         if(root == null)
             return true;
 
-        max(root);
+        int res = max(root);
+        System.out.println("\n"+res);
 
         return balanced;
     }
