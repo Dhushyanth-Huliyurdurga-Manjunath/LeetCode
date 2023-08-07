@@ -25,7 +25,7 @@ public class MaxHeap {
     }
 
     public int parent(int idx){
-        return (int) Math.floor((double) idx / 2);
+        return (int) Math.floor((double) (idx - 1) / 2);
     }
 
     public static void swap(int i, int j, int[] array){
