@@ -58,6 +58,7 @@ public class PathSum {
  *     }
  * }
  */
+
 class Solution67 {
 
     boolean result = false;
