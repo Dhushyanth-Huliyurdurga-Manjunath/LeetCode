@@ -1,5 +1,8 @@
+package General;
+
 import java.util.LinkedList;
 import java.util.List;
+
 
 // public class IntersectionOfLinkedList {
 //     public static void main(String[] args){
@@ -25,7 +28,7 @@ import java.util.List;
  *     }
  * }
  */
-class Solution74 {
+class Solution75 {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         List<ListNode> nodesA = new LinkedList<>();
         List<ListNode> nodesB = new LinkedList<>();
