@@ -73,7 +73,6 @@ class Solution67 {
         }
         pathSum(root.left, root.val+value, targetSum);
         pathSum(root.right, root.val+value, targetSum);
-        return;
     }
 
     public boolean hasPathSum(Node root, int targetSum) {

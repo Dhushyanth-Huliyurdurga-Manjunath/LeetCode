@@ -15,9 +15,7 @@ class Solution56 {
         HashSet<Character> hashSet = new HashSet<Character>();
 
         for(int i = 0; i < sentence.length(); i++){
-            if(!hashSet.contains(sentence.charAt(i))){
-                hashSet.add(sentence.charAt(i));
-            }
+            hashSet.add(sentence.charAt(i));
         }
 
         return hashSet.size() == 26;

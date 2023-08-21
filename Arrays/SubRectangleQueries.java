@@ -22,7 +22,6 @@ class SubrectangleQueries {
             }
         }
 
-        return;
     }
     
     public int getValue(int row, int col) {

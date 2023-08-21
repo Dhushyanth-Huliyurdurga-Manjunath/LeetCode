@@ -54,7 +54,7 @@ class Solution44 {
         // }
         
         if(size % 2 == 1){
-            median = (double)finalArray[size / 2];
+            median = finalArray[size / 2];
         }        
         else{
             // System.out.println(finalArray[size/2] + finalArray[size/2 - 1]);

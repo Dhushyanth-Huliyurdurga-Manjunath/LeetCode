@@ -25,7 +25,7 @@ class Solution60 {
         minSpeed = (int) Math.ceil(totalDistance / hour);
         double time = 0;
         for(int i = 0; i < dist.length - 1; i++){
-             time = (double)Math.ceil((double)dist[i] / minSpeed);
+             time = Math.ceil((double)dist[i] / minSpeed);
 //            if(((double)dist[i]/minSpeed) < min){
 //                minSpeed = ((double)totalDistance - (double)dist[i]) / (hour - time);
 //            }
@@ -36,7 +36,7 @@ class Solution60 {
         if(timeTaken < hour){
             remainingTime = (hour - timeTaken);
             if(remainingTime < 1 && (minSpeed < dist[dist.length - 1])){
-                minSpeed = (double) dist[dist.length - 1] /(double) (hour - timeTaken);
+                minSpeed = (double) dist[dist.length - 1] / (hour - timeTaken);
             }
         }
         timeTaken += ((double)dist[dist.length - 1]/minSpeed);

@@ -20,22 +20,22 @@ class Solution21 {
         }
 
         for(String a: valueMap.values()){
-            if(a.length() == 2 && !valueMap.containsKey((int)hashMap.get(a.charAt(0))-1)){
+            if(a.length() == 2 && !valueMap.containsKey(hashMap.get(a.charAt(0)) -1)){
                 // charsToBeDelete = hashMap.get(a.charAt(0)) - 1;
                 charsToBeDelete += 1;
                 // System.out.println(valueMap.containsKey(hashMap.get(a.charAt(0))));
             }
-            else if(a.length() == 2 && valueMap.containsKey((int)hashMap.get(a.charAt(0))-1)){
+            else if(a.length() == 2 && valueMap.containsKey(hashMap.get(a.charAt(0)) -1)){
                 // System.out.println(valueMap.containsKey(hashMap.get(a.charAt(0)) - 1));
                 // charsToBeDelete = hashMap.get(a.charAt(0)) - 2;
                 charsToBeDelete += 2;
             }
-            else if(a.length() == 3 && !valueMap.containsKey((int)hashMap.get(a.charAt(0))-1)){
+            else if(a.length() == 3 && !valueMap.containsKey(hashMap.get(a.charAt(0)) -1)){
                 // System.out.println(valueMap.containsKey(hashMap.get(a.charAt(0)) - 1));
                 // charsToBeDelete = hashMap.get(a.charAt(0)) - 2;
                 charsToBeDelete += hashMap.get(a.charAt(0))+1;
             }
-            else if(a.length() == 4 && !valueMap.containsKey((int)hashMap.get(a.charAt(0))-1)){
+            else if(a.length() == 4 && !valueMap.containsKey(hashMap.get(a.charAt(0)) -1)){
                 // System.out.println(valueMap.containsKey(hashMap.get(a.charAt(0)) - 1));
                 // charsToBeDelete = hashMap.get(a.charAt(0)) - 2;
                 charsToBeDelete += hashMap.get(a.charAt(0))+2;

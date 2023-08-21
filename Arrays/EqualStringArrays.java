@@ -10,6 +10,6 @@ class Solution7 {
             string2.append(s);
         }
 
-        return string1.toString().equals(string2.toString());
+        return string1.toString().contentEquals(string2);
     }
 }

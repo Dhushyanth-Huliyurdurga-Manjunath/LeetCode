@@ -1,7 +1,7 @@
 import java.util.*;
 
 class OrderedStream {
-    public String stream[];
+    public String[] stream;
     private int pointer;
 
     public OrderedStream(int n) {

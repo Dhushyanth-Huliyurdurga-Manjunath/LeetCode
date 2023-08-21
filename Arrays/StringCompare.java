@@ -20,9 +20,6 @@ class Solution8 {
             }
         }
         System.gc();
-        if(outputS.equals(outputT)){
-            return true;
-        }
-        return false;
+        return outputS.equals(outputT);
     }
 }
