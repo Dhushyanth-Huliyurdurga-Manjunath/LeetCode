@@ -6,7 +6,7 @@ public class RemoveDuplicatesSortedArray {
     int[] array = {0, 0, 1, 1, 1 ,2 ,2 ,3 ,3 , 4};
 
     int k = sol.removeDuplicates(array); 
-    System.out.println(k);
+//    System.out.println(k);
 }
 
 class Solution78 {
