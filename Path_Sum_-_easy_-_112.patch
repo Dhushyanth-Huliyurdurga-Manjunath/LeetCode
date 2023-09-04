@@ -1,0 +1,191 @@
+Subject: [PATCH] Path Sum - easy - 112
+---
+Index: General/PathSum.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/General/PathSum.java b/General/PathSum.java
+new file mode 100644
+--- /dev/null	(revision 125cdeb0eb062cad8ca0efa8e8fd08efb24b0c09)
++++ b/General/PathSum.java	(revision 125cdeb0eb062cad8ca0efa8e8fd08efb24b0c09)
+@@ -0,0 +1,91 @@
++package General;
++
++import Algorithms.BinaryTree;
++import Algorithms.Node;
++
++/**
++ * @author: Dhushyanth Huliyurdurga Manjunath
++ * @since: 8/5/23 12:17 PM
++ */
++
++/**
++  Given the root of a binary tree and an integer targetSum,
++  return true if the tree has a root-to-leaf path such that
++  adding up all the values along the path equals targetSum.
++  A leaf is a node with no children.
++ */
++
++/**
++ * Input: root = [1,2,3], targetSum = 5
++ * Output: false
++ * Explanation: There two root-to-leaf paths in the tree:
++ * (1 --> 2): The sum is 3.
++ * (1 --> 3): The sum is 4.
++ * There is no root-to-leaf path with sum = 5.
++ */
++public class PathSum {
++    public static void main(String[] args){
++        Solution67 sol = new Solution67();
++        Node tree = new Node();
++
++        Node left = new Node(4);
++        Node right = new Node(8);
++
++        tree = new Node(5, left, right);
++        tree.right.insertCustomValue(tree.right, new Node(13), new Node(4));
++        tree.left.insertCustomValue(tree.left, new Node(11), new Node());
++
++        BinaryTree.preOrderTraversal(tree);
++
++        boolean result = sol.hasPathSum(tree, 20);
++
++        System.out.println("\n"+result);
++    }
++}
++
++/**
++ * Definition for a binary tree node.
++ * public class Node {
++ *     int val;
++ *     Node left;
++ *     Node right;
++ *     Node() {}
++ *     Node(int val) { this.val = val; }
++ *     Node(int val, Node left, Node right) {
++ *         this.val = val;
++ *         this.left = left;
++ *         this.right = right;
++ *     }
++ * }
++ */
++class Solution67 {
++
++    boolean result = false;
++
++    public void pathSum(Node root, int value, int targetSum){
++        if(root == null){
++            return;
++        }
++
++        if(value + root.val == targetSum && (root.left == null && root.right == null)){
++            result = true;
++            return;
++        }
++        pathSum(root.left, root.val+value, targetSum);
++        pathSum(root.right, root.val+value, targetSum);
++        return;
++    }
++
++    public boolean hasPathSum(Node root, int targetSum) {
++        if(root == null){
++            return false;
++        }
++        if(root.val == targetSum && (root.left == null && root.right == null)){
++            return true;
++        }
++
++        pathSum(root, 0, targetSum);
++
++        return result;
++    }
++}
+\ No newline at end of file
+diff --git a/out/production/LeetCode/CombinationOfPhoneNumber.class b/out/production/LeetCode/CombinationOfPhoneNumber.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..2fdd6e5d7f7c3b6641b70308ab3f29b15f25d14e
+GIT binary patch
+literal 834
+zc${@o%Wl&^6g`uqacT@H4oONOv_OFLK`qe$i&ouKVr6Khph}3<B$#w6+f(_0)X#!N
+zD}lrZ@KK0kI}w4Vwsh~@$2oK6&iwlQ{U?Av921M^7<gc!giZ~snO|GPLp(C^7+nKT
+z3_KO6?x|2E`vT?O`msReK!5TC>aGgCcWE&6qW5y>Gh@4YB>iI<sVtr(E6It91y<Yx
+z9Sl_{6Q#q$&qpVE3f^T;AXO;P>V0%i<rnGrG8{XDBvRpcH{Vf4V{$a+lqo9KzJTQp
+zw4Y|=uU<1*jl4MZ6M>}y!iw*>Do$8y{VVhQY$~<;U+>=4?e>W`2Re;L-W!!+I@cX*
+zJHuKqaU(}ewNcuOo&HY$rG;nc8CbWlflUKj7M^2UVEH;e9_6o^!{Mnn;^}PPOA;@d
+z!Ej97-kd339m5RW;5<&efTPqYNt;El(#{dF2^l;Y5YU*D7BJ4T$mjJnXZI}>^7i<e
+zYJ6tdSAxjqL2EH`=mq`4#wEnpynK_knkScVi`FU{P-hI1+=e{?$LucCw|}7Y;Syzc
+z)2>`#;q5n6w=Q60bmg4RMkTj3+#yYie><mME8u7_4_51Fvc^}<bsNj1zdI37WL9$Z
+J_i~x{{{RzNzr+9l
+
+diff --git a/out/production/LeetCode/General/PathSum.class b/out/production/LeetCode/General/PathSum.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..13a08b136548733893c635f25049d113029f5a8c
+GIT binary patch
+literal 1395
+zc$|e)TTc@~6#fQEw=4^kOF<Oxf&~i28z>+OD2kSg7BS+}0AsskyGv$wi9Gt~oBkAy
+zDMk{1fIrH3&K5ywqfPdlnREZXndy(8-@XI5i8T{l$QT$lQOA13L<|`gSr(&>B(Cx5
+zI<Ib+lyZwh#~Lw?+Xn8KXh9}{3D%P=rdZrHF^zi$?i-j9h)>zB9ZU<<rw7&qVsqY>
+z5@^lYu38F98%nRr4Tmi4Id4-sYf{_1KQzXIqU{T`<sK<lY3XEFWKhh9rAcy?r0oiH
+zrC;Z^<*v*+(k*23fwtYkWYkFN0;P7;aMLWl=LmEjmCbuj7}%aWHqMm;trRz%aSEQc
+zgJQ|gF45HNa@3nZph4S(BI&qRe(2CbtP7ZVFVvfA-sZur!$C*5xrJ_=B81i5h=>zS
+zIChrBoQ13Cv+w{9E%c+$z`TV=cx+(-PYgV@ki()t_epfKq3vubO*5GmmaxoX#lkZ@
+zH;}imiWk)M1f2rO<1)(|+iH_A#nKDRV}E*~iij!$2e#R+uXHdM`hizklTJu9%%}gK
+zTV1RM@u@#dv$iYs-fHELcC=d7gm+cTU8Q}=$6DQ#=QE4aKf;@;j#(I3|BHwGo*yU*
+zt@lD=BUQOZwwGNYmILBiNxp`0xwE6(ErH>5jeA&SIy@ap>`kx#%bf_kiiz=52U0{w
+zje!J=9o{)^1hK}$z(u6!)$^|of-fe?9@=F|3(^gP`w*WZ_i2*x$Y|mWNvjfoUYsS}
+zh;uk!Nfs%Ji<9l+0qS1uqds?l80m&Z*2X^KOT0)XXf+YzWn#D|whv=5^92e1B6l;n
+ze<zgD_>vqZf0484&`DJz-&ZsZWs;p`SYr*J(R_dwa<#T6%V<kcM0*(>Wpo|`89`G7
+zA%SKj(Mn?{aRu!dMF$qq37c3c5gWS{{ej>z;OPn|Tp-p!neTB4mkDwb?<lvAD)-<m
+aKTg!szQhlf{wQ}TH;n-zN?<VRKlBTx3`rFL
+
+diff --git a/out/production/LeetCode/General/Solution67.class b/out/production/LeetCode/General/Solution67.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..b5c20eb9183b63df5712da6b177c857afcb9b656
+GIT binary patch
+literal 867
+zc${sK-)<5?6vn^VKdh`<p?@e^q1M(aEKw3QZBrT})Yy<<HNo`4s}8ur)@8R@cKZlE
+zM<0L-NvbAZcuV3#HJ%x^m{>3N%sJo8obPvLe_#Im1>iX<CT?Ig4FmVmSi^l0)<xJb
+zNqb;m)4)T9ROk$2FJfRHsMvFTH+sRKmdZyA+J5lSVaT*x-#Ls29VdLxJ02+ut)R=j
+zBObb<PDCy0yF-Sh)`8<YA@{27z>6a{@VB;W48|#s`t5kYuv}`@y<QNyQGYP39+E|^
+z*_3u+5D>`xwQUCdjC(P8uqHz~;$hE;WUsk)#Jiv0@Y96B?DOHfE2G?hjLI~n*$(2c
+z>%4Zw4J$eR<b<Db3pZg|NW(Pn$U+Hu3uWXi*di=okw(8h9Ya=Ju6o?>Ro`|_oGwj~
+z`Nx{xlxCnIJ?9f`>!I80NAx!g`bz+#k6bCL^brIpbCm5sk$a~71I$*xK^aq};Fi#6
+z1s+2~6&cE`=}BZUFFO)$(&a0i(P(W{CeX%($_3Qp;yLn^XcJ^<(I-gTnrLqeQJg3o
+z7r!GVO8sv+mW0B6U2;FAzR#dz3q@>`wu24ql3GI@dy>kYIww>jTS88fHn5DmoS}i+
+zl&QEwxdufq(*6qWCiGuO6R%<uy{?WV%sCdP@YWPw*G6_lEePNXD5DwW3Q`nbQinQa
+j`zYWQR&jt$G$q~IwDXM4p3&KoNx5Q5<w-5bw=ezyELxXV
+
+diff --git a/out/production/LeetCode/Solution67.class b/out/production/LeetCode/Solution67.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..1f1d6eff5de5b9e78861ced8464c1ecb8ac6b87f
+GIT binary patch
+literal 2652
+zc$|%u`%@EF6vw|euf17T#R#;aps1)p2;d8q-~*{v+6cC>(m-EJvLuU}1UDNL`?mJ|
+ze%IPs`>^yqwlf9Mw&QP|=?|Uh@BJe>)1T^$+H(^kNr)XYbMD@~_jA7I+<VX6{C@Sq
+zuK+gUI~kiWC}Bv34TCc7#{&``l<*M8!yGEdu#5<zGMvx^GQtt#h;!&1qa24g42}dx
+zk|V`2#&MX#<VbT^92t&ojvXB197i~ga!ha><9I~K4RSmx!-dC0^SFroL<RhKQbc)5
+z!g2BPw1gAl`Ah|##dD&0UeGUyu@^=2l7yEfyu#q>(v!Niox$#FI>_MYNkuh=ML|8O
+z^<@&nnt4DSHfY2XOhr`Vpla&keRj}c#q~6U5)7q`jHRcN9h(D$8k%KkW=|?HtS415
+zOiZIMII51TZHAhRwS_EGPsRdGxgqj2+Jbu8B41{SQ1eKdNQ-b<VvM13zMCtm$8?Jj
+zDXymD`&6Qq6i|C}g90?QbjF|{a@M2UG}Q?P+fXlqGdn_&sBhP!M;U60*E}(nUw30k
+z23_+r-cG@S^HV4!dy|$H)6BrlhzYp`Axn)MB9UwsRC;vC5_%=PN@d634(T!4?u<zZ
+zZn=rwzCqG*D3viI+8$jjw7%dF`$zW2Q~9cB6}}2Ou$f`;yj4ngO~LDUgHB;?F1yzv
+zFr8p&WZHF=Y?v$};Y|f^;ccP*j)Hgb9*suHC?7ULCg?bsPBuz*h|C~MkR{1dWK;m`
+zFquh~AsZ(<LPn>`=)l=A1}JzRCl!2vQwl!BM+#2kV+CjM2}9Lf+C3@5&>~_36nu)$
+z7#0?9qk_+Imd-%I7s7oKUn=+tUn}@Vh<__Q<hkonwD$htQBtOYpHu9mi=$d8Gry~a
+zg+kRmt{NGwpEjY!*V|O4l=AX(8%}q^rKWS+zREWgERA075_)~Xa_bL>4}^UzW0lm`
+ztk4am3x_Bh?QljlD6Q%;8cl-)7+NxB#j{@|x{7>EHPad`u*4%@)r3fTdUs;Xn#j74
+zf<2}Yy}F!!*^Ja^wA(QLXWgX9_3I~7<15^={D}o}AD=$$D8+UpvyUoY`GApBGNP8I
+zSbR;3zkYT~k#4xDB~s%W<%$OS3)%$nvyss?1RV<X+UQB84d>cvuphG1Td8$r2W!y@
+zQTAB?0d&!mVH>s+Mb35uoMvIGy9ir&8uooH&hv0wgfr~=1+K8&BZa~a4-bW%9(U+G
+z<Y`n)K^bUq6;lfYwNOxt3Mr|Wsua{>L3s)(UQ8_!RF$Br3#rPIkTn9kMPRoUVfmO+
+z4)Y4ER$#Y<!Y)r;5nB?uUa(6AyQ~Ov7fUt>Y`MTz2+5TNte~dR*w^e?HHFnD;q;$t
+zp2C`+<xWTQdH6b<_6}FI^EAHqI;yEtDUbF0XVAoO5_SF-G1yA6rm*%BnrF~r!@wjm
+zLex(II;CQQJX;w$xtGtNO-Sq#y>^C6aCN%9Qf^xI%CplAqBlET;rF_|l=8Y6tQS$P
+z{WW>*f?xP-pjVNZ(cwJdVw2ZG{&Q3_j%-bhqn_G2s+oGUVkr(_8IDn5p22ebh86e+
+zD_JcX*&eK6eYC6rtYu;NnM#?&D2Y+5V=1g>6WG9xV<S67|0QR!h5d=G>~D0ks|eT_
+zx@-<?vn{|5TNQTNYSELe;StEhEW{4%L<M=Yqnmne@{eN|F_Ng_*$NlE+i8~WFlp?@
+z9@r?KKX3<ecFN`=_M#UK%IPQEiM!yW%zi|WdM@lE_XeVJx_zXZ)9Amh(FZ&B6V(p)
+y6&99ow}gAHqEbSLvGyxiMz0bMT)|Qa_fqFytiBA}WpD)tv$u1A^13hE3;zdq$9A{?
+
